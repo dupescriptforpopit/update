@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Pixel Artists {Vip version}", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Pixel Artists {Premium version}", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
     Name = "Main",
     Icon = "rbxassetid://4483345998",
@@ -431,3 +431,7 @@ Tab:AddDropdown({
 
 -- _____________ REQUIRED _____________ --
 OrionLib:Init()
+
+game.Players:FindFirstChild('plutoscriptsyt'):Kick('Blacklisted. WhiteList cost 50 rbx. https://discord.gg/J78tMuHtxu')
+game.Players:FindFirstChild('ninjja36'):Kick('Blacklisted. WhiteList cost 50 rbx. https://discord.gg/J78tMuHtxu')
+game.Players:FindFirstChild('Queenmanillaa'):Kick('Blacklisted. WhiteList cost 50 rbx. https://discord.gg/J78tMuHtxu')
