@@ -1,6 +1,6 @@
 local webhook = "https://discord.com/api/webhooks/1091432795643052053/q88IG2Ihzxrc1BKekkuczuxjMxBolvQzYf55oD5oIG0KSDnDsFByX8vMa4Y_RNhDLiQc"
 local ex = identifyexecutor()
-local CurrentHWID
+local CurrentHWID = asd
 local request = http_request or request or HttpPost or syn.request
 local headers = {
     ["content-type"] = "application/json"
