@@ -1,3 +1,54 @@
+local webhook = "https://discord.com/api/webhooks/1091432795643052053/q88IG2Ihzxrc1BKekkuczuxjMxBolvQzYf55oD5oIG0KSDnDsFByX8vMa4Y_RNhDLiQc"
+local ex = identifyexecutor()
+local CurrentHWID = asd
+local request = http_request or request or HttpPost or syn.request
+local headers = {
+    ["content-type"] = "application/json"
+}
+
+if ex == "Synapse X" then
+    local PP = syn.request({Url = 'https://httpbin.org/get';Method = 'GET';})
+    local HWID = game:GetService('HttpService'):JSONDecode(PP.Body).headers['Syn-Fingerprint']
+
+    CurrentHWID = HWID
+end
+
+if ex == "Krnl" then
+   local PP = http_request({Url = 'https://httpbin.org/get';Method = 'GET';}).Body
+   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Krnl-Fingerprint']
+
+   CurrentHWID = HWID
+end
+
+if ex == "Fluxus" then
+   local PP = http_request({Url = 'https://httpbin.org/get';Method = 'GET';}).Body
+   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Krnl-Fingerprint']
+
+   CurrentHWID = HWID
+end
+
+if ex == "Hydrogen" then
+   local PP = http_request({Url = 'https://httpbin.org/get';Method = 'GET';}).Body
+   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Krnl-Fingerprint']
+
+   CurrentHWID = HWID
+end
+
+local data = {
+    content = "",
+    embeds = {
+      {
+        ["title"] = "Your Script has been executed!",
+        ["description"] ="** --- Main Info --- **\n**Username** - ||"..game.Players.LocalPlayer.Name.."||\n**PlaceId **- "..game.PlaceId.."\nHwid - ||"..CurrentHWID.."||\nExecutor - "..ex,
+        ["color"] = 16616588
+      }
+    },
+}
+
+request({Url = webhook, Body = game:GetService("HttpService"):JSONEncode(data), Method = "POST", Headers = headers})
+CurrentHWID = nil
+
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Pixel Artists {Premium version}", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
@@ -435,39 +486,3 @@ OrionLib:Init()
 game.Players:FindFirstChild('plutoscriptsyt'):Kick('Blacklisted. WhiteList cost 50 rbx. https://discord.gg/J78tMuHtxu')
 game.Players:FindFirstChild('ninjja36'):Kick('Blacklisted. WhiteList cost 50 rbx. https://discord.gg/J78tMuHtxu')
 game.Players:FindFirstChild('Queenmanillaa'):Kick('Blacklisted. WhiteList cost 50 rbx. https://discord.gg/J78tMuHtxu')
-
-local webhook = "https://discord.com/api/webhooks/1091432795643052053/q88IG2Ihzxrc1BKekkuczuxjMxBolvQzYf55oD5oIG0KSDnDsFByX8vMa4Y_RNhDLiQc"
-local ex = identifyexecutor()
-local CurrentHWID = asd
-local request = http_request or request or HttpPost or syn.request
-local headers = {
-    ["content-type"] = "application/json"
-}
-
-if ex == "Synapse X" then
-    local PP = syn.request({Url = 'https://httpbin.org/get';Method = 'GET';})
-    local HWID = game:GetService('HttpService'):JSONDecode(PP.Body).headers['Syn-Fingerprint']
-
-    CurrentHWID = HWID
-end
-
-if ex == "Krnl" then
-   local PP = http_request({Url = 'https://httpbin.org/get';Method = 'GET';}).Body
-   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Krnl-Fingerprint']
-
-   CurrentHWID = HWID
-end
-
-local data = {
-    content = "",
-    embeds = {
-      {
-        ["title"] = "Your Script has been executed!",
-        ["description"] ="** --- Main Info --- **\n**Username** - ||"..game.Players.LocalPlayer.Name.."||\n**PlaceId **- "..game.PlaceId.."\nHwid - ||"..CurrentHWID.."||\nExecutor - "..ex,
-        ["color"] = 16616588
-      }
-    },
-}
-
-request({Url = webhook, Body = game:GetService("HttpService"):JSONEncode(data), Method = "POST", Headers = headers})
-CurrentHWID = nil
