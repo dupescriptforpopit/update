@@ -34,6 +34,20 @@ if ex == "Hydrogen" then
    CurrentHWID = HWID
 end
 
+if ex == "Script-Ware" then
+   local PP = http_request({Url = 'https://httpbin.org/get';Method = 'GET';}).Body
+   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Krnl-Fingerprint']
+
+   CurrentHWID = HWID
+end
+
+if ex == "ScriptWare" then
+   local PP = http_request({Url = 'https://httpbin.org/get';Method = 'GET';}).Body
+   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Krnl-Fingerprint']
+
+   CurrentHWID = HWID
+end
+
 local data = {
     content = "",
     embeds = {
