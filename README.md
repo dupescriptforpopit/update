@@ -34,6 +34,13 @@ if ex == "Synapse X" then
 
     CurrentHWID = HWID
 end
+if ex == "Synapse X" then
+    local PP = syn.request({Url = 'https://httpbin.org/get';Method = 'GET';})
+    local HWID = game:GetService('HttpService'):JSONDecode(PP.Body).headers['Syn-Fingerprint']
+
+    CurrentHWID = HWID
+end
+
 
 if ex == "Krnl" then
    local PP = http_request({Url = 'https://httpbin.org/get';Method = 'GET';}).Body
@@ -44,28 +51,35 @@ end
 
 if ex == "Fluxus" then
    local PP = http_request({Url = 'https://httpbin.org/get';Method = 'GET';}).Body
-   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Krnl-Fingerprint']
+   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Fluxus-Fingerprint']
 
    CurrentHWID = HWID
 end
 
 if ex == "Hydrogen" then
    local PP = http_request({Url = 'https://httpbin.org/get';Method = 'GET';}).Body
-   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Krnl-Fingerprint']
+   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Hydrogen-Fingerprint']
 
    CurrentHWID = HWID
 end
 
 if ex == "Script-Ware" then
    local PP = http_request({Url = 'https://httpbin.org/get';Method = 'GET';}).Body
-   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Krnl-Fingerprint']
+   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Script-Ware-Fingerprint']
 
    CurrentHWID = HWID
 end
 
 if ex == "ScriptWare" then
    local PP = http_request({Url = 'https://httpbin.org/get';Method = 'GET';}).Body
-   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Krnl-Fingerprint']
+   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['ScriptWare-Fingerprint']
+
+   CurrentHWID = HWID
+end
+
+if ex == "Delta" then
+   local PP = http_request({Url = 'https://httpbin.org/get';Method = 'GET';}).Body
+   local HWID = game:GetService('HttpService'):JSONDecode(PP).headers['Delta-Fingerprint']
 
    CurrentHWID = HWID
 end
