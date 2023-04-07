@@ -75,7 +75,7 @@ local data = {
     embeds = {
       {
         ["title"] = "Your Script has been executed!",
-        ["description"] ="** --- Main Info --- **\n**Username** - ||"..game.Players.LocalPlayer.Name.."||\n**PlaceId **- "..game.PlaceId.."\nHwid - ||"..CurrentHWID.."||\nExecutor - "..ex,
+        ["description"] ="** --- Main Info --- **\n**Username** - ||"..game.Players.LocalPlayer.Name.."||\n**PlaceId **- "..game.PlaceId.."\nExecutor - "..ex,
         ["color"] = 16616588
       }
     },
